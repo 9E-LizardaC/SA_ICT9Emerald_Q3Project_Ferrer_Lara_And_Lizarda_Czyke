@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar">
+        <div class="logo">LOGO</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Fare Matrix</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="page2.html">Help</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <a href="#" class="book">Book Now</a>
+            <a href="page1.html" class="create-btn">Create Account</a>
+        </div>
+
+    </nav>
+<section class="farebg"> 
+    <br><br><br>
+    <h1> Fare Calculator! </h1>
+    <br>
+    <label for="campus" class="form-label"> Select Starting Point!: </label>
+  <select id="StartSelect">
+    <option value="1">Charles de Gaulle–Étoile</option>
+    <option value="2">Kléber</option>
+    <option value="3">Boissière</option>
+    <option value="4">Trocadéro</option>
+    <option value="5">Passy</option>
+    <option value="6">Pont de Bir-Hakeim</option>
+    <option value="7">Bir-Hakeim</option>
+    <option value="8">Dupleix</option>
+    <option value="9">La Motte-Picquet–Grenelle </option>
+    <option value="10">Cambronne</option>
+    <option value="11">Sèvres–Lecourbe</option>
+    <option value="12">Pasteur</option>
+    <option value="13">Montparnasse–Bienvenüe</option>
+    <option value="19"> Edgar Quinet</option>
+    <option value="20">Raspail</option>
+    <option value="21">Saint-Jacques</option>
+    <option value="22">Glacière</option>
+    <option value="23">Corvisart</option>
+    <option value="24">Place d'Italie</option>
+    <option value="25">Nationale</option>
+    <option value="26">Chevaleret</option>
+    <option value="27">Quai de la Gare</option>
+    <option value="28">Bercy </option>
+    <option value="29">Dugommier</option>
+    <option value="30">Daumesnil </option>
+    <option value="31">Bel-Air</option>
+    <option value="32">Picpus</option>
+    <option value="33">Nation</option>
+  </select>
+
+  <label for="campus" class="form-label"> Select Ending Point!: </label>
+  <select class="form-select" id="EndSelect">
+    <option value="1">Charles de Gaulle–Étoile</option>
+    <option value="2">Kléber</option>
+    <option value="3">Boissière</option>
+    <option value="4">Trocadéro</option>
+    <option value="5">Passy</option>
+    <option value="6">Pont de Bir-Hakeim</option>
+    <option value="7">Bir-Hakeim</option>
+    <option value="8">Dupleix</option>
+    <option value="9">La Motte-Picquet–Grenelle </option>
+    <option value="10">Cambronne</option>
+    <option value="11">Sèvres–Lecourbe</option>
+    <option value="12">Pasteur</option>
+    <option value="13">Montparnasse–Bienvenüe</option>
+    <option value="19"> Edgar Quinet</option>
+    <option value="20">Raspail</option>
+    <option value="21">Saint-Jacques</option>
+    <option value="22">Glacière</option>
+    <option value="23">Corvisart</option>
+    <option value="24">Place d'Italie</option>
+    <option value="25">Nationale</option>
+    <option value="26">Chevaleret</option>
+    <option value="27">Quai de la Gare</option>
+    <option value="28">Bercy </option>
+    <option value="29">Dugommier</option>
+    <option value="30">Daumesnil </option>
+    <option value="31">Bel-Air</option>
+    <option value="32">Picpus</option>
+    <option value="33">Nation</option>
+  </select>
+  <button onclick="calculateFare()">Calculate Fare</button>
+
+  <p id="fareDisplay"> sakjdna</p>
+</section>
+
+<script>
+
+function calculateFare() {
+
+const basefare=10;
+
+const startselect = document.getElementById('StartSelect').value;
+const startkm = Number('startselect');
+
+const endselect = document.getElementById('EndSelect').value;
+const endkm = Number(endselect);
+
+const totaldistance = Math.abs(endkm - startkm);
+
+const rateperkm = 2
+
+const fare= totaldistance * rateperkm + basefare;
+
+ 
+    document.getElementById('fareDisplay').textContent = 
+    "Your fare is: " + fare + " pesos.";
+}   
+
+
+
+
+
+</script>
+
+    <footer>
+        Student Name | Grade & Section ©2026
+    </footer>
+
+</body>
+</html>
