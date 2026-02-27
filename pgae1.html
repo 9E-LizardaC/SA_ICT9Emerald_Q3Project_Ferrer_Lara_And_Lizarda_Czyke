@@ -3,45 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav class="navbar">
-        <div class="logo">LOGO</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Fare Matrix</a></li>
-            <li><a href="#">Schedule</a></li>
-            <li><a href="#">Help</a></li>
-        </ul>
-        <div class="nav-buttons">
-            <a href="#" class="book">Book Now</a>
-            <a href="#" class="create-btn">Create Account</a>
+   <nav class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Fare Matrix</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Help</a></li>
+    </ul>
+
+    <div class="nav-buttons">
+        <a href="#" class="book">Book Now</a>
+        <a href="#" class="create-btn">Create Account</a>
+    </div>
+</nav>
+
+    <section class="hero">
+
+        <div class="registration-card">
+
+            <div class="left-panel">
+                <div class="profile-placeholder">
+
+                <img src="pfp.png" 
+                style="width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                object-fit: cover;"
+                id="pfp">
+
+                </div>
+                <input type="file" id="userfile">
+                <div style="text-align: center;"> 
+
+                <br>
+                <br>
+
+                <img src="sadjp.png"
+                 id="jp"
+                 style="width: 150px;
+                 border-radius: 20px; 
+                 border-style: solid; 
+                 border-color: black;">
+
+                <button onclick="document.getElementById('jp').src='happyjp.png'">
+                 Click to make him happy!</button>
+
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <h1>REGISTRATION FORM 💫</h1>
+
+                <p class="instructions">
+                    Hello, friends! (｡˃ ᵕ ˂ )⸝♡ Please fill out all required fields in the registration form with accurate information.
+                </p>
+
+                <form id="form">
+                    <label>First Name 🌟</label>
+                    <input type="text" id="FirstName" name="FirstName">
+
+                    <label>Last Name ✨</label>
+                    <input type="text" id="LastName" name="LastName">
+
+                    <div class="row">
+                        <div>
+                            <label>Age ( ╹ -╹)?</label>
+                            <input type="number" id="age" name="age">
+                        </div>
+                        <div>
+                            <label>Contact Number 📱</label>
+                            <input type="text" id="ContactNumber" name="ContactNumber">
+                        </div>
+                    </div>
+
+                    <label>Email 📧</label>
+                    <input type="email" id="Email" name="Email">
+
+                    <label>Enter your username (ෆ˙ᵕ˙ෆ)♡</label>
+                    <input type="text" id="User" name="User">
+
+                    <label>Enter your password (っᵔ◡ᵔ)っ</label>
+                    <input type="password" id="Pass" name="Pass">
+
+                    <div style="text-align:center" class="terms">
+                        <input type="checkbox">
+                        <span>I accept the Terms of Use and Privacy Policy</span>
+                    </div>
+                    <br>
+
+                    <button class="submit-btn" id="button1">Create my account</button>
+                </form>
+            </div>
+
         </div>
-    </nav>
-
-    <br>
-    <br>
-
-    <section class="homebg">
-    
-        <div class="welcome-card">
-            <img src="https://i.redd.it/n7jqebcwxm751.jpg"
-            class="home-logo"
-            style="width: 300px;"> 
-            <br>
-            <br>
-            <h1 class="home-text"> Welcome to the Torchic and Jigglypuff Fare Guide! </h1>
-            <br>
-            <button type="button" class="home-button"> Click here to learn more about our website! </button> 
-              
-            <br>
-        
-
     </section>
+    <br>
+    <br>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const userfile= document.getElementById('userfile');
+    const pfp = document.getElementById('pfp');
+
+    userfile.addEventListener('change', () => {
+     const newpfp = userfile.files[0];
+     if (!newpfp) return;
+     const url= URL.createObjectURL(newpfp);
+     pfp.src=url;
+    });
+
+     const form = document.getElementById('form');
+     const button1 = document.getElementById("button1");
+
+     let x=0;
+     let y=7;
+     button1.disabled=false;
+      
+     form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    x=0;
+
+      const FirstName = document.getElementById("FirstName").value;
+         if (FirstName === "") {
+            alert("You're missing your first name!");
+            return;
+         }   
+         x++;
+
+         const LastName = document.getElementById("LastName").value;
+         if (LastName === "") {
+            alert("You're missing your last name!");
+            return;
+         } 
+         x++;
+
+         const ContactNumber = document.getElementById("ContactNumber").value;
+         if (ContactNumber === "") {
+            alert("You're missing your contact number!");
+            return;
+         } 
+         x++; 
+
+         const Email = document.getElementById("Email").value;
+         if (Email === "") {
+            alert("You're missing your email!");
+            return;
+         } 
+         x++;
+
+         const User = document.getElementById("User").value;
+         if (User === "") {
+            alert("You're missing a username!");
+            return;
+         } 
+         x++;
+
+         const Pass = document.getElementById("Pass").value;
+         if (Pass === "") {
+            alert("You're missing a password!");
+            return;
+         } 
+         x++;
+       const age = Number(document.getElementById("age").value);
+      if (age < 13) {
+         alert("Oops! You need to be 13 years or older to make an account!");
+         return;
+      }
+
+      if (age>120) {
+            alert("Please enter a valid age.");
+            return;
+         }
+         x++;
+        if (x===y) {
+            button1.disabled=false;}
+            
+            location.reload();
+       });
+
+    });
+
+    </script>
     <footer>
-        Student Name | Grade & Section ©2026
+        Lara Ferrer and Czyke Lizarda | 9-Emerald ©2026
     </footer>
 
 </body>
