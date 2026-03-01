@@ -10,7 +10,7 @@
         <div class="logo">LOGO</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="page3.html">Fare Matrix</a></li>
+            <li><a href="#">Fare Matrix</a></li>
             <li><a href="#">Schedule</a></li>
             <li><a href="page2.html">Help</a></li>
         </ul>
@@ -21,98 +21,149 @@
 
     </nav>
 <section class="farebg"> 
-    <br><br><br>
+
+    <div class="farebg2">
     <h1> Fare Calculator! </h1>
-    <br>
-    <label for="campus" class="form-label"> Select Starting Point!: </label>
+    <br> <br>
+
+<!-- Values are based off km away from first station, rounded -->
+
+    <label for="start" class="form-label"> Select Starting Point!: </label>
   <select id="StartSelect">
-    <option value="1">Charles de Gaulle–Étoile</option>
-    <option value="2">Kléber</option>
-    <option value="3">Boissière</option>
-    <option value="4">Trocadéro</option>
-    <option value="5">Passy</option>
-    <option value="6">Pont de Bir-Hakeim</option>
-    <option value="7">Bir-Hakeim</option>
-    <option value="8">Dupleix</option>
-    <option value="9">La Motte-Picquet–Grenelle </option>
-    <option value="10">Cambronne</option>
-    <option value="11">Sèvres–Lecourbe</option>
-    <option value="12">Pasteur</option>
-    <option value="13">Montparnasse–Bienvenüe</option>
-    <option value="19"> Edgar Quinet</option>
-    <option value="20">Raspail</option>
-    <option value="21">Saint-Jacques</option>
-    <option value="22">Glacière</option>
-    <option value="23">Corvisart</option>
-    <option value="24">Place d'Italie</option>
-    <option value="25">Nationale</option>
-    <option value="26">Chevaleret</option>
-    <option value="27">Quai de la Gare</option>
-    <option value="28">Bercy </option>
-    <option value="29">Dugommier</option>
-    <option value="30">Daumesnil </option>
-    <option value="31">Bel-Air</option>
-    <option value="32">Picpus</option>
-    <option value="33">Nation</option>
+    <option value="bzzt">Select an option!</option>
+    <option value="0">Charles de Gaulle</option>
+    <option value="1">Kléber</option>
+    <option value="1">Boissière</option>
+    <option value="1">Trocadéro</option>
+    <option value="1">Passy</option>
+    <option value="2">Bir-Hakeim</option>
+    <option value="3">Dupleix</option>
+    <option value="3">La Motte-Picquet–Grenelle </option>
+    <option value="4">Cambronne</option>
+    <option value="4">Sèvres–Lecourbe</option>
+    <option value="5">Pasteur</option>
+    <option value="6">Montparnasse–Bienvenüe</option>
+    <option value="6">Edgar Quinet</option>
+    <option value="7">Raspail</option>
+    <option value="7">Denfert-Rochereau</option>
+    <option value="8">Saint-Jacques</option>
+    <option value="8">Glacière</option>
+    <option value="9">Corvisart</option>
+    <option value="9">Place d'Italie</option>
+    <option value="10">Nationale</option>
+    <option value="11">Chevaleret</option>
+    <option value="11">Quai de la Gare</option>
+    <option value="12">Bercy </option>
+    <option value="13">Dugommier</option>
+    <option value="13">Daumesnil </option>
+    <option value="13">Bel-Air</option>
+    <option value="14">Picpus</option>
+    <option value="14">Nation</option>
   </select>
+<br>
+<br>
 
-  <label for="campus" class="form-label"> Select Ending Point!: </label>
+  <label for="end" class="form-label"> Select Ending Point!: </label>
   <select class="form-select" id="EndSelect">
-    <option value="1">Charles de Gaulle–Étoile</option>
-    <option value="2">Kléber</option>
-    <option value="3">Boissière</option>
-    <option value="4">Trocadéro</option>
-    <option value="5">Passy</option>
-    <option value="6">Pont de Bir-Hakeim</option>
-    <option value="7">Bir-Hakeim</option>
-    <option value="8">Dupleix</option>
-    <option value="9">La Motte-Picquet–Grenelle </option>
-    <option value="10">Cambronne</option>
-    <option value="11">Sèvres–Lecourbe</option>
-    <option value="12">Pasteur</option>
-    <option value="13">Montparnasse–Bienvenüe</option>
-    <option value="19"> Edgar Quinet</option>
-    <option value="20">Raspail</option>
-    <option value="21">Saint-Jacques</option>
-    <option value="22">Glacière</option>
-    <option value="23">Corvisart</option>
-    <option value="24">Place d'Italie</option>
-    <option value="25">Nationale</option>
-    <option value="26">Chevaleret</option>
-    <option value="27">Quai de la Gare</option>
-    <option value="28">Bercy </option>
-    <option value="29">Dugommier</option>
-    <option value="30">Daumesnil </option>
-    <option value="31">Bel-Air</option>
-    <option value="32">Picpus</option>
-    <option value="33">Nation</option>
+    <option value="bzzt">Select an option!</option>
+    <option value="0">Charles de Gaulle</option>
+    <option value="1">Kléber</option>
+    <option value="1">Boissière</option>
+    <option value="1">Trocadéro</option>
+    <option value="1">Passy</option>
+    <option value="2">Bir-Hakeim</option>
+    <option value="3">Dupleix</option>
+    <option value="3">La Motte-Picquet–Grenelle </option>
+    <option value="4">Cambronne</option>
+    <option value="4">Sèvres–Lecourbe</option>
+    <option value="5">Pasteur</option>
+    <option value="6">Montparnasse–Bienvenüe</option>
+    <option value="6">Edgar Quinet</option>
+    <option value="7">Raspail</option>
+    <option value="7">Denfert-Rochereau</option>
+    <option value="8">Saint-Jacques</option>
+    <option value="8">Glacière</option>
+    <option value="9">Corvisart</option>
+    <option value="9">Place d'Italie</option>
+    <option value="10">Nationale</option>
+    <option value="11">Chevaleret</option>
+    <option value="11">Quai de la Gare</option>
+    <option value="12">Bercy </option>
+    <option value="13">Dugommier</option>
+    <option value="13">Daumesnil </option>
+    <option value="13">Bel-Air</option>
+    <option value="14">Picpus</option>
+    <option value="14">Nation</option>
   </select>
-  <button onclick="calculateFare()">Calculate Fare</button>
+  <br><br>
 
-  <p id="fareDisplay"> sakjdna</p>
+
+  <label for="campus" class="form-label"> Applicable Discount?: </label>
+  <select class="form-select" id="Discount">
+    <option value="bzzt">Select an option!</option>
+    <option value="1">No Discount!</option>
+    <option value="0.5">PWD Discount!</option>
+    <option value="0.8">Student Discount!</option>
+   
+   </select>
+
+  <br><br>
+  <button onclick="calculateFare()">Calculate Fare</button>
+  <br><br>
+
+
+  <p id="fareDisplay"> Your fare is...</p>
+
+  <br><br>
+
+  <button onclick="window.location.href='page3.html'">Proceed with ticket purchase?</button>
+
+  </div>
 </section>
 
 <script>
 
 function calculateFare() {
 
-const basefare=10;
+const basefare=2;
 
-const startselect = document.getElementById('StartSelect').value;
-const startkm = Number('startselect');
+const discount= document.getElementById('Discount').value;
+const startkm = document.getElementById('StartSelect').value;
+const endkm = document.getElementById('EndSelect').value;
 
-const endselect = document.getElementById('EndSelect').value;
-const endkm = Number(endselect);
+
+if (startkm ==="bzzt") {
+    alert("Select a valid starting point!");
+    return;
+}
+
+if (endkm ==="bzzt") {
+    alert("Select a valid ending point!");
+    return;
+}
+
+if (discount ==="bzzt") {
+    alert("Select a valid option!");
+    return;
+}
+
+if (startkm === endkm) {
+    alert("Your starting and ending point can't be the same!");
+    return;
+}
+
 
 const totaldistance = Math.abs(endkm - startkm);
 
-const rateperkm = 2
+const rateperkm = 0.5;
 
-const fare= totaldistance * rateperkm + basefare;
+const prediscount= totaldistance * rateperkm + basefare;
+
+const fare = prediscount * discount;
 
  
     document.getElementById('fareDisplay').textContent = 
-    "Your fare is: " + fare + " pesos.";
+    "Your fare is: " + fare + " euros!!!";
 }   
 
 
@@ -126,5 +177,4 @@ const fare= totaldistance * rateperkm + basefare;
     </footer>
 
 </body>
-
 </html>
