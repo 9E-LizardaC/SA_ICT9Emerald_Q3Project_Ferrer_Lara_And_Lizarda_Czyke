@@ -283,15 +283,22 @@ form input:focus{
 
 /* Fare Guide */
 
+/* Fare Guide */
+
 .farebg {
     height: 90vh;
     background: url("https://images4.alphacoders.com/125/125914.jpg") no-repeat center center/cover;
     text-align: center;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.map {
-    width:90%;
-    border: #111 solid 3px;;
+.farebg2 {
+    background-color: rgba(249, 55, 117, 0.7);
+    padding: 100px; 
+    max-width: 50%;
+    border-radius: 20px;
 }
+
+
