@@ -1,5 +1,4 @@
 * {
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -517,7 +516,7 @@ footer{
 
 .confirm-bg {
     min-height: 100vh;
-    background: url("https://i.pinimg.com/1200x/0c/b6/07/0cb60758b9f834da175ad297a36acd5f.jpg") no-repeat center center/cover;
+    background: url("https://i.pinimg.com/736x/3b/1e/02/3b1e0257efd5f870c56b0a35b12d364f.jpg") no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -545,7 +544,7 @@ footer{
 .confirm-panel h1 {
     font-size: 38px;
     font-weight: 700;
-    color: #7c3d13;
+    color: #bf550e;
     text-shadow: 0 3px 15px rgba(255,128,0,0.4);
 }
 
