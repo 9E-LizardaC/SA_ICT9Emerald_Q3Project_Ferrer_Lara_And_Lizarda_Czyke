@@ -10,15 +10,14 @@
         <div class="logo">LOGO</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Fare Matrix</a></li>
-            <li><a href="#">Schedule</a></li>
+            <li><a href="page3.html">Fare Matrix</a></li>
+            <li><a href="page5.html">Schedule</a></li>
             <li><a href="page2.html">Help</a></li>
         </ul>
         <div class="nav-buttons">
-            <a href="#" class="book">Book Now</a>
+            <a href="page3.html" class="book">Book Now</a>
             <a href="page1.html" class="create-btn">Create Account</a>
         </div>
-
     </nav>
 <section class="farebg"> 
 
@@ -116,17 +115,20 @@
 
   <br><br>
 
-  <button onclick="window.location.href='page3.html'">Proceed with ticket purchase?</button>
+  <button onclick="window.location.href='page4.html'" id="button">Proceed with ticket purchase?</button>
 
   </div>
 </section>
 
 <script>
 
+
+button.disabled=true;
+
 function calculateFare() {
 
 const basefare=2;
-
+const button= document.getElementById('button')
 const discount= document.getElementById('Discount').value;
 const startkm = document.getElementById('StartSelect').value;
 const endkm = document.getElementById('EndSelect').value;
@@ -161,11 +163,14 @@ const prediscount= totaldistance * rateperkm + basefare;
 
 const fare = prediscount * discount;
 
+if (fare>0) {
+    button.disabled=false;
+}
+
  
     document.getElementById('fareDisplay').textContent = 
     "Your fare is: " + fare + " euros!!!";
 }   
-
 
 
 
@@ -178,3 +183,4 @@ const fare = prediscount * discount;
 
 </body>
 </html>
+
