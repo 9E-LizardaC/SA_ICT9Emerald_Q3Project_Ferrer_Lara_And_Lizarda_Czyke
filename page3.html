@@ -2,184 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Registration Page</title>
+    <title>Fare Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <nav class="navbar">
-        <div class="logo">LOGO</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="page3.html">Fare Matrix</a></li>
-            <li><a href="page5.html">Schedule</a></li>
-            <li><a href="page2.html">Help</a></li>
-        </ul>
-        <div class="nav-buttons">
-            <a href="page3.html" class="book">Book Now</a>
-            <a href="page1.html" class="create-btn">Create Account</a>
-        </div>
-    </nav>
-<section class="farebg"> 
-
-    <div class="farebg2">
-    <h1> Fare Calculator! </h1>
-    <br> <br>
+    <div class="logo">
+        <img src="https://i.imgur.com/yourlogo.png" alt="Logo" class="nav-logo">
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page3.html">Fare Matrix</a></li>
+        <li><a href="page5.html">Schedule</a></li>
+        <li><a href="page2.html">Help</a></li>
+    </ul>
+    <div class="nav-buttons">
+        <a href="page3.html" class="book">Book Now</a>
+        <a href="page1.html" class="create-btn">Create Account</a>
+    </div>
+</nav>
+    
+<section class="farebg">
+    <div class="fare-card">
+        <h1 class="fare-title">Fare Calculator! (≧ᗜ≦)</h1>
+        <div class="fare-divider"></div>
 
 <!-- Values are based off km away from first station, rounded -->
 
-    <label for="start" class="form-label"> Select Starting Point!: </label>
-  <select id="StartSelect">
-    <option value="bzzt">Select an option!</option>
-    <option value="0">Charles de Gaulle</option>
-    <option value="1">Kléber</option>
-    <option value="1">Boissière</option>
-    <option value="1">Trocadéro</option>
-    <option value="1">Passy</option>
-    <option value="2">Bir-Hakeim</option>
-    <option value="3">Dupleix</option>
-    <option value="3">La Motte-Picquet–Grenelle </option>
-    <option value="4">Cambronne</option>
-    <option value="4">Sèvres–Lecourbe</option>
-    <option value="5">Pasteur</option>
-    <option value="6">Montparnasse–Bienvenüe</option>
-    <option value="6">Edgar Quinet</option>
-    <option value="7">Raspail</option>
-    <option value="7">Denfert-Rochereau</option>
-    <option value="8">Saint-Jacques</option>
-    <option value="8">Glacière</option>
-    <option value="9">Corvisart</option>
-    <option value="9">Place d'Italie</option>
-    <option value="10">Nationale</option>
-    <option value="11">Chevaleret</option>
-    <option value="11">Quai de la Gare</option>
-    <option value="12">Bercy </option>
-    <option value="13">Dugommier</option>
-    <option value="13">Daumesnil </option>
-    <option value="13">Bel-Air</option>
-    <option value="14">Picpus</option>
-    <option value="14">Nation</option>
-  </select>
-<br>
-<br>
+ <label for="start" class="form-label">Select Starting Point (≧ヮ≦) 💕:</label>
+        <select id="StartSelect" class="form-select">
+            <option value="bzzt">Select an option! ٩(^ᗜ^ )و</option>
+            <option value="0">Charles de Gaulle</option>
+            <option value="1">Kléber</option>
+            <option value="1">Boissière</option>
+            <option value="1">Trocadéro</option>
+            <option value="1">Passy</option>
+            <option value="2">Bir-Hakeim</option>
+            <option value="3">Dupleix</option>
+            <option value="3">La Motte-Picquet–Grenelle </option>
+            <option value="4">Cambronne</option>
+            <option value="4">Sèvres–Lecourbe</option>
+            <option value="5">Pasteur</option>
+            <option value="6">Montparnasse–Bienvenüe</option>
+            <option value="6">Edgar Quinet</option>
+            <option value="7">Raspail</option>
+            <option value="7">Denfert-Rochereau</option>
+            <option value="8">Saint-Jacques</option>
+            <option value="8">Glacière</option>
+            <option value="9">Corvisart</option>
+            <option value="9">Place d'Italie</option>
+            <option value="10">Nationale</option>
+            <option value="11">Chevaleret</option>
+            <option value="11">Quai de la Gare</option>
+            <option value="12">Bercy </option>
+            <option value="13">Dugommier</option>
+            <option value="13">Daumesnil </option>
+            <option value="13">Bel-Air</option>
+            <option value="14">Picpus</option>
+            <option value="14">Nation</option>
+        </select>
 
-  <label for="end" class="form-label"> Select Ending Point!: </label>
-  <select class="form-select" id="EndSelect">
-    <option value="bzzt">Select an option!</option>
-    <option value="0">Charles de Gaulle</option>
-    <option value="1">Kléber</option>
-    <option value="1">Boissière</option>
-    <option value="1">Trocadéro</option>
-    <option value="1">Passy</option>
-    <option value="2">Bir-Hakeim</option>
-    <option value="3">Dupleix</option>
-    <option value="3">La Motte-Picquet–Grenelle </option>
-    <option value="4">Cambronne</option>
-    <option value="4">Sèvres–Lecourbe</option>
-    <option value="5">Pasteur</option>
-    <option value="6">Montparnasse–Bienvenüe</option>
-    <option value="6">Edgar Quinet</option>
-    <option value="7">Raspail</option>
-    <option value="7">Denfert-Rochereau</option>
-    <option value="8">Saint-Jacques</option>
-    <option value="8">Glacière</option>
-    <option value="9">Corvisart</option>
-    <option value="9">Place d'Italie</option>
-    <option value="10">Nationale</option>
-    <option value="11">Chevaleret</option>
-    <option value="11">Quai de la Gare</option>
-    <option value="12">Bercy </option>
-    <option value="13">Dugommier</option>
-    <option value="13">Daumesnil </option>
-    <option value="13">Bel-Air</option>
-    <option value="14">Picpus</option>
-    <option value="14">Nation</option>
-  </select>
-  <br><br>
+        <label for="end" class="form-label">Select Ending Point (๑>◡<๑):</label>
+        <select id="EndSelect" class="form-select">
+            <option value="bzzt">Select an option! ٩(^ᗜ^ )و</option>
+            <option value="0">Charles de Gaulle</option>
+            <option value="1">Kléber</option>
+            <option value="1">Boissière</option>
+            <option value="1">Trocadéro</option>
+            <option value="1">Passy</option>
+            <option value="2">Bir-Hakeim</option>
+            <option value="3">Dupleix</option>
+            <option value="3">La Motte-Picquet–Grenelle </option>
+            <option value="4">Cambronne</option>
+            <option value="4">Sèvres–Lecourbe</option>
+            <option value="5">Pasteur</option>
+            <option value="6">Montparnasse–Bienvenüe</option>
+            <option value="6">Edgar Quinet</option>
+            <option value="7">Raspail</option>
+            <option value="7">Denfert-Rochereau</option>
+            <option value="8">Saint-Jacques</option>
+            <option value="8">Glacière</option>
+            <option value="9">Corvisart</option>
+            <option value="9">Place d'Italie</option>
+            <option value="10">Nationale</option>
+            <option value="11">Chevaleret</option>
+            <option value="11">Quai de la Gare</option>
+            <option value="12">Bercy </option>
+            <option value="13">Dugommier</option>
+            <option value="13">Daumesnil </option>
+            <option value="13">Bel-Air</option>
+            <option value="14">Picpus</option>
+            <option value="14">Nation</option>
+        </select>
 
+        <label for="campus" class="form-label">Applicable Discount? ( ˵ •̀ □ •́ ˵ ) </label>
+        <select id="Discount" class="form-select">
+            <option value="bzzt">Select an option! ٩(^ᗜ^ )و </option>
+            <option value="1">No Discount!</option>
+            <option value="0.5">PWD Discount!</option>
+            <option value="0.8">Student Discount!</option>
+        </select>
 
-  <label for="campus" class="form-label"> Applicable Discount?: </label>
-  <select class="form-select" id="Discount">
-    <option value="bzzt">Select an option!</option>
-    <option value="1">No Discount!</option>
-    <option value="0.5">PWD Discount!</option>
-    <option value="0.8">Student Discount!</option>
-   
-   </select>
+        <div class="button-group">
+            <button onclick="calculateFare()">Calculate Fare</button>
+            <button id="button" onclick="window.location.href='page4.html'" disabled>Proceed with ticket purchase?</button>
+        </div>
 
-  <br><br>
-  <button onclick="calculateFare()">Calculate Fare</button>
-  <br><br>
-
-
-  <p id="fareDisplay"> Your fare is...</p>
-
-  <br><br>
-
-  <button onclick="window.location.href='page4.html'" id="button">Proceed with ticket purchase?</button>
-
-  </div>
+        <p id="fareDisplay">Your fare is...</p>
+    </div>
 </section>
 
 <script>
-
-
 button.disabled=true;
 
 function calculateFare() {
+    const basefare=2;
+    const button= document.getElementById('button')
+    const discount= document.getElementById('Discount').value;
+    const startkm = document.getElementById('StartSelect').value;
+    const endkm = document.getElementById('EndSelect').value;
 
-const basefare=2;
-const button= document.getElementById('button')
-const discount= document.getElementById('Discount').value;
-const startkm = document.getElementById('StartSelect').value;
-const endkm = document.getElementById('EndSelect').value;
+    if (startkm ==="bzzt") { alert("Select a valid starting point!"); return;}
+    if (endkm ==="bzzt") { alert("Select a valid ending point!"); return;}
+    if (discount ==="bzzt") { alert("Select a valid option!"); return;}
+    if (startkm === endkm) { alert("Your starting and ending point can't be the same!"); return;}
 
+    const totaldistance = Math.abs(endkm - startkm);
+    const rateperkm = 0.5;
+    const prediscount= totaldistance * rateperkm + basefare;
+    const fare = prediscount * discount;
 
-if (startkm ==="bzzt") {
-    alert("Select a valid starting point!");
-    return;
-}
+    if (fare>0) { button.disabled=false; }
 
-if (endkm ==="bzzt") {
-    alert("Select a valid ending point!");
-    return;
-}
-
-if (discount ==="bzzt") {
-    alert("Select a valid option!");
-    return;
-}
-
-if (startkm === endkm) {
-    alert("Your starting and ending point can't be the same!");
-    return;
-}
-
-
-const totaldistance = Math.abs(endkm - startkm);
-
-const rateperkm = 0.5;
-
-const prediscount= totaldistance * rateperkm + basefare;
-
-const fare = prediscount * discount;
-
-if (fare>0) {
-    button.disabled=false;
-}
-
- 
     document.getElementById('fareDisplay').textContent = 
-    "Your fare is: " + fare + " euros!!!";
-}   
-
-
-
-
+    "Your fare is: " + fare + " euros! *ੈ✩‧₊˚(˶˃⤙˂˶)‧₊˚*✩";
+}
 </script>
 
-    <footer>
-        Student Name | Grade & Section ©2026
-    </footer>
+<footer>
+    Lara Ferrer and Czyke Lizarda | 9-Emerald ©2026
+</footer>
 
 </body>
 </html>
