@@ -283,8 +283,6 @@ form input:focus{
 
 /* Fare Guide */
 
-/* Fare Guide */
-
 .farebg {
     height: 90vh;
     background: url("https://images4.alphacoders.com/125/125914.jpg") no-repeat center center/cover;
@@ -294,6 +292,11 @@ form input:focus{
     align-items: center;
 }
 
+.map {
+    width:90%;
+    border: #111 solid 3px;;
+}
+
 .farebg2 {
     background-color: rgba(249, 55, 117, 0.7);
     padding: 100px; 
@@ -301,4 +304,43 @@ form input:focus{
     border-radius: 20px;
 }
 
+/* Confirmation of Ticket */
 
+.confirm-bg {
+    height: 90vh;
+    background: url("https://cdn.wallpapersafari.com/60/20/ow2i1z.png") no-repeat center center/cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-panel {
+    background-color: rgba(238, 147, 50, 0.8);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+/* Schedule Page */
+
+.schedule-bg {
+    height: 90vh;
+    background: url("https://cdn.wallpapersafari.com/60/20/ow2i1z.png") no-repeat center center/cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule-panel {
+    background-color: rgba(238, 147, 50, 0.8);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+table, th, td, tr{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 100%;
+}
