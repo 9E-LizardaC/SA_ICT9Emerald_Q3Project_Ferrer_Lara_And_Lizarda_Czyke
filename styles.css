@@ -406,19 +406,109 @@ footer{
     letter-spacing: 1px;
 }
 
-/* Fare Guide */
+/* Fare Matrix Card */
+
+.fare-card, 
+.fare-card label, 
+.fare-card select, 
+.fare-card button, 
+#fareDisplay {
+    font-family: 'Quicksand', sans-serif;
+}
 
 .farebg {
-    height: 90vh;
-    background: url("https://images4.alphacoders.com/125/125914.jpg") no-repeat center center/cover;
-    text-align: center;
+    min-height: 100vh;
+    background: url("https://i.pinimg.com/736x/a7/ec/8f/a7ec8f436b16d3f5c38633d0184114bf.jpg") no-repeat center center/cover;
+    display: flex;
     justify-content: center;
     align-items: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
 }
 
-.map {
-    width:90%;
-    border: #111 solid 3px;;
+.fare-card {
+    max-width: 700px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(14px);
+    border-radius: 35px;
+    box-shadow: 0 20px 50px rgba(255,182,217,0.4);
+    border: 2px solid rgba(255,255,255,0.5);
+    padding: 50px 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    animation: floatCard 5s ease-in-out infinite;
 }
 
+.fare-card h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fa6603;
+    text-shadow: 0 3px 15px rgba(255,128,0,0.4);
+    margin-bottom: 15px;
+}
+
+.fare-card label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.fare-card select {
+    padding: 14px 18px;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    box-shadow: 0 6px 18px rgba(255,182,193,0.35);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fare-card select:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(255,182,193,0.5);
+}
+
+.fare-card button {
+    padding: 16px 35px;
+    border: none;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 700;
+    background: linear-gradient(135deg,#f192c2,#ff9f45);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255,105,180,0.5);
+    transition: all 0.35s ease;
+}
+
+.fare-card button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(255,182,217,0.9);
+    letter-spacing: 1px;
+}
+
+#fareDisplay {
+    font-weight: 700;
+    font-size: 20px;
+    color: #ff4fa3;
+    text-shadow: 0 3px 10px rgba(255,182,193,0.6);
+    margin-top: 10px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@keyframes floatCard {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
 
