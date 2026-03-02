@@ -232,34 +232,99 @@ form input:focus{
 
 /* Home Page */
 
-.home-text {
-    color: black;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
 
+.home-text{
+    color:#ca5353;
+    font-size:40px;
+    font-weight:600;
+    text-shadow:0 3px 12px rgba(255,105,180,0.4);
+    letter-spacing:1px;
 }
 
 .homebg {
-   height: 90vh;
-    background: url("https://wallpapers.com/images/hd/jigglypuff-background-1831nr80w9atg3ku.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://i.pinimg.com/1200x/37/91/94/379194c922642ada47bc9533b42a1d2a.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 1.5s ease;
+    padding-top: 0; 
 }
 
-.welcome-card {
-    max-width: 1000px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: hsl(350, 100%, 90%);
-    padding: 35px;
-    border-radius: 30%; 
+.welcome-card{
+    max-width:900px;
+    text-align:center;
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(14px);
+    padding:45px;
+    border-radius:40px;
+    box-shadow:0 20px 50px rgba(255,182,217,0.4);
+    border:2px solid rgba(255,255,255,0.5);
+    animation:floatCard 5s ease-in-out infinite;
 }
 
-.home-button {
-    background-image: linear-gradient(to right, orange);
-    padding: 20px;
-    max-width: 250px;
-    border-radius: 30%;
+.home-logo{
+    animation:floatLogo 3.5s ease-in-out infinite;
+}
+
+.home-button{
+    background:linear-gradient(135deg,#d89ca6,#f8a95f);
+    padding:18px 28px;
+    border:none;
+    border-radius:999px;
+    font-size:18px;
+    font-weight:600;
+    color:white;
+    cursor:pointer;
+    transition:all .35s ease;
+    box-shadow:0 8px 25px rgba(255,105,180,0.4);
+}
+.home-button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px rgba(255,182,217,0.9);
+    letter-spacing:1px;
+}
+
+.book:hover,
+.create-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px rgba(255,182,217,0.7);
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(10px);
+    color:#ff4fa3;
+    font-weight:600;
+}
+
+@keyframes floatLogo{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-12px)}
+    100%{transform:translateY(0)}
+}
+
+@keyframes floatCard{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+    100%{transform:translateY(0)}
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:scale(.97)}
+    to{opacity:1; transform:scale(1)}
 }
 
 /* Help Page */
@@ -287,7 +352,6 @@ form input:focus{
     height: 90vh;
     background: url("https://images4.alphacoders.com/125/125914.jpg") no-repeat center center/cover;
     text-align: center;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -297,50 +361,3 @@ form input:focus{
     border: #111 solid 3px;;
 }
 
-.farebg2 {
-    background-color: rgba(249, 55, 117, 0.7);
-    padding: 100px; 
-    max-width: 50%;
-    border-radius: 20px;
-}
-
-/* Confirmation of Ticket */
-
-.confirm-bg {
-    height: 90vh;
-    background: url("https://cdn.wallpapersafari.com/60/20/ow2i1z.png") no-repeat center center/cover;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.confirm-panel {
-    background-color: rgba(238, 147, 50, 0.8);
-    padding: 50px;
-    border-radius: 20px;
-}
-
-/* Schedule Page */
-
-.schedule-bg {
-    height: 90vh;
-    background: url("https://cdn.wallpapersafari.com/60/20/ow2i1z.png") no-repeat center center/cover;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.schedule-panel {
-    background-color: rgba(238, 147, 50, 0.8);
-    padding: 50px;
-    border-radius: 20px;
-}
-
-table, th, td, tr{
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 10px;
-    max-width: 100%;
-}
