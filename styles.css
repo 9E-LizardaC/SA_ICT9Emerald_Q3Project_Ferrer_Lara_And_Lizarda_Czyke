@@ -9,6 +9,7 @@ body {
     background-color: #111;
     color: white;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -56,8 +57,6 @@ body {
     text-decoration: none;
     color: white;
 }
-
-
 
 .hero {
     min-height: 90vh;
@@ -331,20 +330,80 @@ footer{
 /* Help Page */
 
 .help-bg {
-   height: 90vh;
-    background: url("https://images8.alphacoders.com/561/thumb-1920-561869.jpg") no-repeat center center/cover;
-    text-align: center;
+    min-height: 100vh; /* full screen height */
+    background: url("https://i.pinimg.com/1200x/75/e6/6a/75e66a5fe3a079850c34cb689a096a2d.jpg") no-repeat center center/cover;
+    display: flex;
     justify-content: center;
     align-items: center;
+    padding: 60px 20px; 
+    box-sizing: border-box;
 }
 
-.image-instruc {
-    height: 400px;
-
+.help-container {
+    max-width: 900px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25); 
+    backdrop-filter: blur(14px);
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(255,182,217,0.4); 
+    border: 2px solid rgba(255,255,255,0.5);
+    padding: 40px 30px;
+    text-align: center;
+    animation: floatCard 5s ease-in-out infinite;
 }
 
-.prev-instruc {
-    margin-right: 20px;
+.help-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fa6603;
+    margin-bottom: 20px;
+    text-shadow: 0 3px 12px #ff800066;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: #ff8103;
+    margin: 0 auto 30px;
+    border-radius: 5px;
+}
+
+.image-frame img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(255,105,180,0.4);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.image-frame img:hover {
+    transform: scale(1.05);
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.button-group button {
+    background:linear-gradient(135deg,#f192c2,#ff9f45);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 25px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255,105,180,0.4);
+    transition: all 0.35s ease;
+}
+
+.button-group button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255,182,217,0.9);
+    letter-spacing: 1px;
 }
 
 /* Fare Guide */
@@ -361,4 +420,5 @@ footer{
     width:90%;
     border: #111 solid 3px;;
 }
+
 
