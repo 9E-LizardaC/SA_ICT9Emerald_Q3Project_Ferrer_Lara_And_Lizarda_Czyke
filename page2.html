@@ -1,82 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Registration Page</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffb6d9">
+<title> Help Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
 <nav class="navbar">
-        <div class="logo">LOGO</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="page3.html">Fare Matrix</a></li>
-            <li><a href="page5.html">Schedule</a></li>
-            <li><a href="page2.html">Help</a></li>
-        </ul>
-        <div class="nav-buttons">
-            <a href="page3.html" class="book">Book Now</a>
-            <a href="page1.html" class="create-btn">Create Account</a>
-        </div>
-    </nav>
+<div class="logo">LOGO</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="page3.html">Fare Matrix</a></li>
+<li><a href="page5.html">Schedule</a></li>
+<li><a href="page2.html">Help</a></li>
+</ul>
+<div class="nav-buttons">
+<a href="page3.html" class="book">Book Now</a>
+<a href="page1.html" class="create-btn">Create Account</a>
+</div>
+</nav>
 
-    <section class="help-bg">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNfhRw5loG2wlB8pL2-gnI4lGP9-geODd9Gw&s"
-    id="main-instruc">   
-    </div>
-    <br>
-    <br>
-        <button class="prev-instruc" onclick="LastInstruction()"> Previous Instructions</button>
-        <button onclick="NextInstruction()"> Next Instructions</button>
+<section class="help-bg">
 
-    </section>
+<div class="help-container">
 
-    <script>
-    
-    var currentinstruction =0;
-    const savedimages = [
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNfhRw5loG2wlB8pL2-gnI4lGP9-geODd9Gw&s',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1GLEu5zu3jvQp1QtYr1RksvqAVg3rJWG_Dg&s',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFYqoKTu_o3Zns2yExbst2Co84Gpc2Q1RJbA&s'
-    ];
-    
-    const maininstruc = document.getElementById('main-instruc');
+<h1 class="help-title">Instructions Guide (˶˃⤙˂˶)</h1>
 
-    function showInstruction() {
-        maininstruc.src = savedimages[currentinstruction];
-    }
+<div class="divider"></div>
 
-    function NextInstruction() {
-        if (currentinstruction < savedimages.length - 1) {
-            currentinstruction++;
-            showInstruction();
-        }
-     }
-     
-     function LastInstruction() {
-        if (currentinstruction>0) {
-            currentinstruction--;
-            showInstruction();
-        }
+<br><br><br><br><br><br><br>
 
-     }
+<div class="image-frame">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNfhRw5loG2wlB8pL2-gnI4lGP9-geODd9Gw&s"
+id="main-instruc">   
+</div>
 
-     showInstruction();
-     
+<br><br>
 
-    </script>    
+<div class="button-group">
+<button class="prev-instruc" onclick="LastInstruction()"> ⋆⟢ Previous Instructions ⭑𓂃 </button>
+<button onclick="NextInstruction()"> Next Instructions</button>
+</div>
 
-    <footer>
-        Student Name | Grade & Section ©2026
-    </footer>
+</div>
+</section>
+
+<script>
+
+var currentinstruction =0;
+const savedimages = [
+'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNfhRw5loG2wlB8pL2-gnI4lGP9-geODd9Gw&s',
+'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1GLEu5zu3jvQp1QtYr1RksvqAVg3rJWG_Dg&s',
+'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFYqoKTu_o3Zns2yExbst2Co84Gpc2Q1RJbA&s'
+];
+
+const maininstruc = document.getElementById('main-instruc');
+
+function showInstruction() {
+maininstruc.src = savedimages[currentinstruction];
+}
+
+function NextInstruction() {
+if (currentinstruction < savedimages.length - 1) {
+currentinstruction++;
+showInstruction();
+}
+}
+
+function LastInstruction() {
+if (currentinstruction>0) {
+currentinstruction--;
+showInstruction();
+}
+}
+
+showInstruction();
+
+</script>
+
+<footer class="footer">
+Lara Ferrer | 9-Emerald ©2026
+</footer>
 
 </body>
 </html>
