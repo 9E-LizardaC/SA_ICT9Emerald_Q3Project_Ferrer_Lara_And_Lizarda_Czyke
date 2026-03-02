@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Registration Page</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metro Schedule & Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav class="navbar">
-        <div class="logo">LOGO</div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Fare Matrix</a></li>
@@ -15,57 +20,50 @@
             <li><a href="page2.html">Help</a></li>
         </ul>
         <div class="nav-buttons">
-            <a href="#" class="book">Book Now</a>
-            <a href="page1.html" class="create-btn">Create Account</a>
+            <a href="#" class="btn book">Book Now</a>
+            <a href="page1.html" class="btn create-btn">Create Account</a>
         </div>
     </nav>
+
+    <main>
+        <section class="schedule-section">
+            <div class="schedule-panel">
+                <h1>Schedule of Our Metro</h1>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                            <th>Holidays</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5:30 AM - 1:15 AM</td>
+                            <td>5:30 AM - 1:15 AM</td>
+                            <td>5:30 AM - 1:15 AM</td>
+                            <td>5:30 AM - 1:15 AM</td>
+                            <td>5:30 AM - 2:15 AM</td>
+                            <td>5:30 AM - 2:15 AM</td>
+                            <td>5:30 AM - 1:15 AM</td>
+                            <td>5:30 AM - 2:15 AM</td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">Trains every 2-4 minutes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
     
-    <section class="schedule-bg">
-
-        <div class="schedule-panel">
-        <h1> Schedule of our Metro!</h1>
-        <br><br>
-
-            <table class= "schedule-table">
-                <tr>
-                    <th> Monday</th>
-                    <th> Tuesday </th>
-                    <th> Wednesday </th>
-                    <th> Thursday </th>
-                    <th> Friday </th>
-                    <th> Saturday </th>
-                    <th> Sunday </th>
-                    <th> Holidays </th>
-                </tr>
-                <tr> 
-                    <td> 5:30 AM to 1:15 AM  </td>
-                    <td> 5:30 AM to 1:15 AM  </td>
-                    <td> 5:30 AM to 1:15 AM  </td>
-                    <td> 5:30 AM to 1:15 AM  </td>
-                    <td> 5:30 AM to 2:15 AM  </td>
-                    <td> 5:30 AM to 2:15 AM  </td>
-                    <td> 5:30 AM to 1:15 AM </td>
-                    <td> 5:30 AM to 2:15 AM</td>
-                </tr>
-                <tr>
-                    <td> Trains every 2-4 minutes</td>
-                    <td> Trains every 2-4 minutes</td>
-                    <td> Trains every 2-4 minutes</td>
-                    <td> Trains every 2-4 minutes</td>
-                    <td> Trains every 2-4 minutes</td>
-                    <td> Trains every 2-4 minutes</td>
-                    <td> Trains every 2-4 minutes</td>
-                    <td> Trains every 2-4 minutes</td>
-                </tr>
-
-            </table>
-
-        </div>
-
-    </section>
-
     <footer>
-        Student Name | Grade & Section ©2026
+        <p> Lara Ferrer and Czyke Lizarda | 9-Emerald ©2026</p>
     </footer>
 
 </body>
