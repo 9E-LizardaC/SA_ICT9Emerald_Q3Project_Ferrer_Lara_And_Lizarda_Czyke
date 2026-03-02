@@ -375,6 +375,7 @@ footer{
     box-shadow: 0 8px 25px rgba(255,105,180,0.4);
     margin-bottom: 30px;
     transition: transform 0.3s ease;
+    border: #111 solid 2px;
 }
 
 .image-frame img:hover {
